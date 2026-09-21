@@ -39,6 +39,19 @@ Good: "Run `npm install jsonwebtoken`, then edit `src/auth.ts:42`."
 
 If the answer is a command, path, or snippet, it goes first. Prose comes after, if at all.
 
+**Governed exception (④a) — outranks this rule, does not repeal it.** When the reader is Alex, a
+rule outside this skill requires the first line to begin `Alex, `. That prefix is not context and
+not a plan; it is a fixed address label. The action still starts in the same sentence, right after
+the comma: `Alex, run npm install jsonwebtoken, then edit src/auth.ts:42.` Never put `Alex,` alone
+on its own line, and never insert a second sentence between the comma and the action — that would
+be context creeping back in under cover of the exception.
+
+**Not an exception (④b) — this is the rule at its strictest, not a carve-out from it.** A session
+resume (a handoff, `CONTEXT-CARD.md`, the text Alex pastes to reopen a session) is a different
+artifact from a reply, so ④a's name prefix does not apply to it. Its first line is only
+`cd <path> && claude` — nothing above it, not even a title, not even `Alex,`. That is rule 1 with
+zero tolerance: the entire first line is the runnable action, full stop.
+
 ### 2. Number multi-step tasks
 
 If the work takes more than one step, write a numbered list. Each step is one bounded action. No step contains "and then" twice.
@@ -115,6 +128,17 @@ Forbidden recaps after a completed task: "I've now done X, Y, and Z, which means
 Forbidden closers: "Let me know if you need anything else," "Hope this helps," "Happy to clarify," "Feel free to ask."
 
 Start with the answer. End when the answer is done.
+
+**Governed exception (④a) — the `Alex, ` prefix is not a forbidden opener.** It carries no
+content, states no intent, and adds no delay: unlike "Great question," or "Let me...", it does not
+push the action into a later sentence, because the action starts right after its comma, in the
+same sentence. Treat the four characters `Alex, ` as fixed address text prepended to the answer,
+not as an announcement. The exception covers only that prefix — whatever follows the comma is
+still bound by every word of this rule, so `Alex, let me look into that` is still a violation.
+
+**Not an exception (④b).** A session resume is not a reply and carries no `Alex,` prefix at all
+(see rule 1's note); its first line is the command itself, which this rule already permits without
+any carve-out.
 
 ## When to break the rules
 

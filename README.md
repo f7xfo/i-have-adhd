@@ -82,6 +82,37 @@ A skill for your coding assistant that stops it from burying the answer. Action 
 9. Cap lists to 5 items.
 10. No preamble. No recap. No closers.
 
+## Trial — governance session only, 2026-09-21 → 2026-09-28
+
+Alex is trialing this fork's response shape on his governance session only, for one week. The
+fleet ("parc") session runs without it, as the comparison; it is not installed there.
+
+**Failure condition, written before the trial starts.** An experiment with no way to fail is an
+adoption wearing an experiment's costume. So, for the week:
+
+Count every time a fact or number enters the register (a worksite row, a pattern, a key, a commit
+message) without its own measurement stated in the same turn — the "dictated → measured" shape,
+or its plain-language equivalent.
+
+1. 0 such instances for the week → the skill stays, as forked.
+2. 1 instance → the fork gets adjusted.
+3. 2 instances → the skill comes out.
+
+Verdict on 2026-09-28, against the count above — not renegotiated after a good week.
+
+**The reserve this trial is testing.** "No preamble, action first" (rule 10) removes the sentence
+that, on the governance session the day this trial was proposed, caught four real defects before
+they landed — each one caught in the sentence stated immediately *before* the gesture, not after:
+a password headed toward a transcript, a vault value missing its own domain, a false causal story,
+and a number wrong by an order of magnitude.
+
+Read strictly, rule 10 forbids announcing what you are about to *do* — it does not forbid stating
+*where a number comes from*, and the pre-send check (SKILL.md, "Pre-send check," item 4) already
+asks you to keep any hedge that carries real uncertainty. So a strict reading of this skill does
+not delete the measurement sentence; a fast reading does. That gap — strict reading vs. fast
+reading — is exactly what the failure condition above is measuring, not a vibe check at the end of
+the week.
+
 ## Tune it
 
 Fork, edit `skills/i-have-adhd/SKILL.md`, then swap your copy in:
