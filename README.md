@@ -82,36 +82,62 @@ A skill for your coding assistant that stops it from burying the answer. Action 
 9. Cap lists to 5 items.
 10. No preamble. No recap. No closers.
 
-## Trial — governance session only, 2026-09-21 → 2026-09-28
+## Trial, 2026-09-21 → 2026-09-28
 
-Alex is trialing this fork's response shape on his governance session only, for one week. The
-fleet ("parc") session runs without it, as the comparison; it is not installed there.
+**Install location, measured, not labeled.** As of this writing, this Skill is installed nowhere.
+This repository is a fork with two edits (rules 1 and 10 of `SKILL.md`, and this section) — no
+`claude plugin install`, no marketplace add, in any session. Checked directly: neither
+`~/.claude.json` nor `~/.claude/settings.json` nor either candidate project's
+`.claude/settings*.json` names `i-have-adhd`. Which single session actually installs it, and
+whether that is `~/projects/botmekong/workspace` or somewhere else, is Alex's call to make and
+name here before the week starts — this file will not call it "the governance session" again
+without a path attached.
 
-**Failure condition, written before the trial starts.** An experiment with no way to fail is an
-adoption wearing an experiment's costume. So, for the week:
+**The trial's actual subject: does a strict or a fast reading of this Skill win in practice?**
+Read strictly, rule 10 forbids announcing what you're about to *do* — it does not forbid stating
+*where a number comes from* — and the pre-send check (item 4) already keeps any hedge that carries
+real uncertainty. So a strict reading does not delete a measurement sentence; a fast reading does.
+Nobody reads a style rule strictly under load. The trial exists to find out which reading a real
+session actually produces once "no preamble, action first" is in force turn after turn — not to
+re-argue the rule's text, which already resolves in the Skill's favor.
 
-Count every time a fact or number enters the register (a worksite row, a pattern, a key, a commit
-message) without its own measurement stated in the same turn — the "dictated → measured" shape,
-or its plain-language equivalent.
+**Why this is worth testing at all.** On the day this trial was proposed, four real defects were
+each caught by a sentence stated immediately *before* a gesture, not after: a password headed
+toward a transcript, a vault value missing its own domain, a false causal story, and a number wrong
+by an order of magnitude. That is the cost a fast reading would pay. It is evidence for why the
+strict/fast gap matters, not itself the thing being measured.
 
-1. 0 such instances for the week → the skill stays, as forked.
+**Failure condition.** For the week, count instances of the fast reading: a fact or number entering
+a register (a commit, a worksite row, a pattern, a key) with no preceding stated measurement, where
+the same class of action carried one on every other day before the trial.
+
+1. 0 instances → the fork stays as is.
 2. 1 instance → the fork gets adjusted.
-3. 2 instances → the skill comes out.
+3. 2 instances → the Skill comes out.
 
 Verdict on 2026-09-28, against the count above — not renegotiated after a good week.
 
-**The reserve this trial is testing.** "No preamble, action first" (rule 10) removes the sentence
-that, on the governance session the day this trial was proposed, caught four real defects before
-they landed — each one caught in the sentence stated immediately *before* the gesture, not after:
-a password headed toward a transcript, a vault value missing its own domain, a false causal story,
-and a number wrong by an order of magnitude.
+**Who counts, where it's written, what makes an instance visible — named plainly, not assumed.**
+There is no static check for this. Unlike a missing file or an unreachable path, "a sentence that
+should have been there and wasn't" is a semantic judgment, not a structural one — nothing here can
+grep for an absence in free prose the way `boot-sequence-check.sh` greps for a missing document.
+So, concretely:
 
-Read strictly, rule 10 forbids announcing what you are about to *do* — it does not forbid stating
-*where a number comes from*, and the pre-send check (SKILL.md, "Pre-send check," item 4) already
-asks you to keep any hedge that carries real uncertainty. So a strict reading of this skill does
-not delete the measurement sentence; a fast reading does. That gap — strict reading vs. fast
-reading — is exactly what the failure condition above is measuring, not a vibe check at the end of
-the week.
+- **Where:** every instance is a dated line in [`TRIAL-LOG.md`](./TRIAL-LOG.md), in this repo, not
+  buried in a chat transcript. The file starts empty; its own emptiness on 2026-09-28 is the "0"
+  case, not an assumption that nothing happened.
+- **Who writes the line:** whoever catches the instance — Alex, on noticing it in the moment, or
+  the session itself, on catching its own prior turn, in the same session where it happened. Both
+  are legitimate; the file does not distinguish them, because the count does not care who caught
+  it, only that it was caught and written down before the week closes.
+- **What makes it visible at all — the honest answer:** attention. Nothing in this trial detects a
+  missing sentence automatically. If no one — Alex or the session — happens to notice a given
+  omission during the week, it is not in `TRIAL-LOG.md`, and it does not count on 2026-09-28,
+  whether or not it happened. **This means the trial measures Alex's (and the session's) attention
+  to this specific failure mode during the week, not the Skill in isolation** — the same shape as
+  `repo-clone-freshness.sh` answering a question adjacent to the one it was built for. The
+  mitigation is not a script; it is naming this plainly, here, before the week starts, so a clean
+  `TRIAL-LOG.md` on 2026-09-28 is read as "nothing was caught," not as "nothing happened."
 
 ## Tune it
 
